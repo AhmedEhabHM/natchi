@@ -1,0 +1,466 @@
+/* ========== Variables ========== */
+:root {
+  --max-width: 1240px;
+  --accent: #ff6f1a; /* orange */
+  --accent-dark: #f15a00;
+  --teal: #2dd5d8; /* turquoise */
+  --muted: #6b6b6b;
+  --text: #111111;
+  --white: #ffffff;
+  --container-gap: 20px;
+  --radius-lg: 20px;
+}
+
+/* ========== Base ========== */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: #111111;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+}
+
+:root {
+  --h1-size: clamp(1.6rem, 3.2vw + 0.5rem, 3.4rem);
+  --h2-size: clamp(1.4rem, 2.4vw + 0.2rem, 2.2rem);
+  --h3-size: clamp(1.15rem, 1.6vw + 0.2rem, 1.6rem);
+  --body-size: clamp(0.95rem, 1.1vw + 0.1rem, 1.02rem);
+}
+
+.about-section {
+  margin-bottom: -10vh;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+/* ===== LEFT COLUMN ===== */
+.left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+}
+
+.who-title {
+  font-size: clamp(1.4rem, 2.4vw + 0.2rem, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 30px 0;
+}
+
+.who-desc {
+  color: #6b6b6b;
+  font-size: clamp(0.95rem, 1.1vw + 0.1rem, 1.02rem);
+  padding-right: 4rem;
+  margin: 1rem 0;
+}
+
+.who_are_we {
+  width: 90%;
+  object-fit: cover;
+  border-radius: 20% 0 20% 0;
+  margin-bottom: 2rem;
+  height: 70vh;
+}
+
+  .exclusive-badge_V2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    text-align: center;
+    padding: 0;
+    top: -3rem;
+    right: 3rem;
+    background-color: #f97316;
+    color: white;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: 12px solid white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+  }
+
+  .experience-card_V2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 20%;
+    bottom: -2rem;
+    right: 30%;
+    background-color: #06b6d4;
+    color: white;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0;
+    line-height: 1.25;
+    outline: white solid 15px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+  }
+
+
+/* ===== RIGHT COLUMN ===== */
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* small orange kicker */
+.kicker {
+  color: #ff6f1a;
+  font-weight: 700;
+  display: block;
+  margin-top: 25px;
+}
+
+/* big hero title */
+.hero-title {
+  font-size: clamp(1.6rem, 3.2vw + 0.5rem, 3.4rem);
+  line-height: 1.02;
+  margin: 6px 0 6px 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+/* hero paragraph */
+.hero-desc {
+  color: #6b6b6b;
+  font-size: clamp(0.95rem, 1.1vw + 0.1rem, 1.02rem);
+  margin: 0 0 6px 0;
+  max-width: 56ch;
+}
+
+/* Why title */
+.why-title {
+  font-size: clamp(1.15rem, 1.6vw + 0.2rem, 1.6rem);
+  margin-top: 8px;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+/* two column list for reasons */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* lists styling */
+.reasons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: #6b6b6b;
+  font-size: clamp(0.95rem, 1.1vw + 0.1rem, 1.02rem);
+}
+.reasons li {
+  position: relative;
+  padding-left: 18px;
+}
+.reasons li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #ff6f1a;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+
+.cta-row {
+  margin: auto;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #ff6f1a 0, #f15a00 100%);
+  color: #fff;
+  border: none;
+}
+
+/* ---Offer Section Styles--------- */
+
+.offer-section {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #2c3e50;
+  font-family: "Jost", sans-serif;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Header */
+.offer-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.offer-subtitle {
+  font-size: 1rem;
+  color: #ff681a;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.offer-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Articles */
+.offer-intro,
+.offer-details,
+.offer-pool,
+.offer-extra {
+  margin-bottom: 1.5rem;
+}
+
+.offer-intro p,
+.offer-details p,
+.offer-pool p,
+.offer-extra p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Bold highlights */
+.offer-intro strong,
+.offer-details strong,
+.offer-extra strong {
+  font-weight: 700;
+}
+
+/* ========== Mobile-specific tweaks ========== */
+@media (max-width: 479px) {
+  .collage-bg {
+    height: 180px;
+    border-radius: 22px;
+  }
+  .badge-year {
+    right: 12%;
+    transform: none;
+    top: -8px;
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+  .circle-ring {
+    width: 100px;
+    height: 100px;
+    bottom: -20px;
+    right: 10%;
+    padding: 8px;
+  }
+  .badge-happy {
+    width: 120px;
+    height: 66px;
+    bottom: -16px;
+    left: 4%;
+    font-size: 0.95rem;
+  }
+  .hero-title {
+    font-size: clamp(1.6rem, 4.6vw, 2.1rem);
+  }
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== TABLET (>=768px) ========== */
+@media (min-width: 768px) {
+  .two-col {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+  .collage-bg {
+    height: 260px;
+  }
+  .badge-year {
+    top: 8px;
+    right: 18%;
+    transform: translateX(30%);
+    font-size: 1.3rem;
+    padding: 18px 24px;
+  }
+  .circle-ring {
+    width: 150px;
+    height: 150px;
+    bottom: -28px;
+    right: 8%;
+    padding: 12px;
+  }
+  .badge-happy {
+    width: 150px;
+    height: 92px;
+    left: 2%;
+    bottom: -22px;
+  }
+  .reasons-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 4.6vw + 0.5rem, 3rem);
+  }
+}
+
+/* ========== LAPTOP (>=1024px) ========== */
+@media (min-width: 1024px) {
+  .container {
+    padding: 40px 28px;
+  }
+  .collage-bg {
+    height: 320px;
+    border-radius: 56px 18px 18px 56px;
+  }
+  .badge-year {
+    right: 20%;
+    top: -12px;
+    font-size: 1.5rem;
+    padding: 22px 30px;
+  }
+  .circle-ring {
+    width: 170px;
+    height: 170px;
+    bottom: -36px;
+    right: 6%;
+    padding: 14px;
+  }
+  .badge-happy {
+    width: 170px;
+    height: 98px;
+    bottom: -30px;
+    left: 3%;
+  }
+  .hero-desc {
+    max-width: 64ch;
+  }
+  .hero-title {
+    font-size: clamp(2.6rem, 5.6vw + 0.6rem, 2.6rem);
+  }
+}
+
+/* ========== DESKTOP XL (>=1440px) ========== */
+@media (min-width: 1440px) {
+  :root {
+    --max-width: 1320px;
+  }
+  .container {
+    padding: 48px 28px;
+  }
+  /* larger visual scale like reference image */
+  .collage-bg {
+    height: 420px;
+  }
+  .badge-year {
+    right: 22%;
+    top: -18px;
+    font-size: 1.8rem;
+    padding: 26px 34px;
+  }
+  .circle-ring {
+    width: 210px;
+    height: 210px;
+    bottom: -48px;
+    right: 6%;
+    padding: 18px;
+  }
+  .badge-happy {
+    width: 210px;
+    height: 110px;
+    bottom: -38px;
+    left: 3%;
+  }
+  .hero-title {
+    font-size: 4.2rem;
+    line-height: 1;
+  }
+  .who-title {
+    font-size: 2.8rem;
+  }
+}
+
+/* Accessibility & small polish */
+button:focus,
+a:focus {
+  outline: 3px solid rgba(255, 111, 26, 0.18);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Tablet ≥768px */
+@media (min-width: 768px) {
+  .offer-title {
+    font-size: 2.5rem;
+  }
+  .offer-subtitle {
+    font-size: 1.1rem;
+  }
+  .offer-intro p,
+  .offer-details p,
+  .offer-pool p,
+  .offer-extra p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Laptop ≥1024px */
+@media (min-width: 1024px) {
+  .offer-title {
+    font-size: 2.8rem;
+  }
+  .offer-intro p,
+  .offer-details p,
+  .offer-pool p,
+  .offer-extra p {
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+}
+
+/* Desktop ≥1440px */
+@media (min-width: 1440px) {
+  .offer-title {
+    font-size: 3rem;
+  }
+  .offer-subtitle {
+    font-size: 1.2rem;
+  }
+  .offer-intro p,
+  .offer-details p,
+  .offer-pool p,
+  .offer-extra p {
+    font-size: 1.15rem;
+  }
+}
+.about_image {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

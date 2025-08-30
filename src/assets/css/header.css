@@ -1,0 +1,298 @@
+/* Subnav */
+.subnav {
+  background-color: #ff601c;
+  color: #fff;
+  font-size: 14px;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+}
+
+.subnav-content span {
+  margin-left: 5vw;
+}
+
+.subnav-translate {
+  display: flex;
+  align-items: center;
+  margin-right: 5vw;
+}
+
+.subnav i {
+  margin-right: 6px;
+}
+.subnav-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.subnav-content a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.subnav-content a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.mainnav {
+  background-color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainnav .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.mainnav .navbar-brand span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff601c;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #000 !important;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 15px !important;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ff601c !important;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff601c;
+}
+
+.desktop-address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 80%;
+}
+.addressURL {
+  color: #ff601c;
+padding-left:  1rem;
+}
+.addressURL:hover{
+color: #000;
+}
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Sidebar */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  padding: 2rem 1.5rem;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-sidebar.active {
+  left: 0;
+}
+
+.close-menu {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.mobile-nav-list .nav-item {
+  margin-bottom: 1rem;
+}
+
+.mobile-nav-list .nav-link {
+  padding: 0.75rem 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  font-size: 1.1rem;
+}
+
+.mobile-subnav-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-subnav-content span {
+  display: flex;
+  align-items: center;
+}
+
+/* Icons */
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #ff601c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.icon-btn:hover {
+  background-color: #e04f12;
+  transform: translateY(-2px);
+}
+
+/* Google Translate Styling */
+.skiptranslate.goog-te-gadget img {
+  display: none;
+}
+
+#\:0\.targetLanguage > span > a > span:nth-child(1) {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 999px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .subnav-content span:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mobile-overlay,
+  .mobile-sidebar {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 999px) {
+  .nav-list {
+    gap: 0.8rem;
+  }
+
+  .desktop-address {
+    display: none;
+  }
+
+  .subnav-content {
+    width: 50%;
+  }
+}
+@media (max-width: 425px) {
+  .email {
+    display: none;
+  }
+  .fa-envelope {
+    display: none;
+  }
+}
+/* Large desktop adjustments */
+@media (min-width: 1200px) {
+  .nav-list {
+    gap: 2rem;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+}

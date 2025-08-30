@@ -1,0 +1,180 @@
+/* Contact Map Styles */
+.contact-map-container {
+  position: relative;
+  padding:80px 0 0 0;
+}
+
+.map-section {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.contact-info-section {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%) !important;
+  min-height: 200px;
+  width: 100%;
+  position: relative;
+}
+
+.contact-cards-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Updated icon circle to be perfectly circular and centered */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #ff6b35 !important;
+  flex-shrink: 0;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle i {
+  font-size: 20px;
+}
+
+.card-title {
+  color: #333 !important;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  color: #666 !important;
+  font-size: 0.95rem;
+}
+
+/* Removed all floating button styles completely */
+
+/* Contact Form Styles */
+.contact-form-section {
+  background-color: #f8f9fa;
+}
+
+.contact-subtitle {
+  color: #ff6b35 !important;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.contact-title {
+  color: #333 !important;
+  font-weight: 700 !important;
+}
+
+.contact-description {
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Updated form input styles to match screenshot design */
+.contact-input {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.contact-input:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.15);
+  outline: none;
+}
+
+.contact-input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+/* Updated button styles to use orange theme classes */
+.btn-orange {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%) !important;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-orange:hover {
+  background-color: #e55a2b;
+  border-color: #e55a2b;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .contact-title {
+    font-size: 2.5rem !important;
+  }
+
+  .map-section {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-info-section .p-4 {
+    padding: 1.5rem !important;
+  }
+
+  .contact-card {
+    padding: 1.5rem !important;
+  }
+
+  .contact-title {
+    font-size: 2rem !important;
+  }
+}
+
+/* Bootstrap Override */
+.bg-orange {
+  background-color: #ff6b35 !important;
+}
+
+.text-orange {
+  color: #ff6b35 !important;
+}
+
+.bg-primary {
+  background-color: #ff6b35 !important;
+}
+
+.text-primary {
+  color: #ff6b35 !important;
+}

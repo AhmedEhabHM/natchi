@@ -1,0 +1,728 @@
+/* ----- Base Mobile Styles ----- */
+html {
+  font-size: 14px;
+}
+
+body,
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----- General Responsive Adjustments ----- */
+@media (max-width: 767px) {
+  body,
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* ----- Hero/Header Section ----- */
+@media (max-width: 767px) {
+  .headerSection h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .headerSection h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .headerImg img {
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  .headerSection .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .headerSection h1 {
+    font-size: 2.2rem;
+  }
+
+  .headerSection h2 {
+    font-size: 2.5rem;
+  }
+
+  .headerImg img {
+    height: 110vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerSection h1 {
+    font-size: 2.5rem;
+  }
+
+  .headerSection h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .headerSection h1 {
+    font-size: 1.5rem;
+  }
+
+  .headerSection h2 {
+    font-size: 2.6rem;
+  }
+}
+
+/* ----- Discover Section ----- */
+@media (max-width: 767px) {
+  .discoverSection {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .discoverImgs {
+    min-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .discoverImgs img:nth-child(1),
+  .discoverImgs img:nth-child(2),
+  .discoverImgs img:nth-child(3) {
+    grid-column: 1;
+    grid-row: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+
+  .discover-title h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .discover-quote {
+    flex-direction: column;
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+
+  .discover-quote p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .discover-button button {
+    margin-left: 0;
+    width: 50%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 350px) {
+  .discoverSection {
+    padding: 0%;
+  }
+
+  .benefit-text {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .discoverImgs {
+    min-width: 100%;
+    gap: 0.8rem;
+  }
+
+  .discoverImgs img {
+    height: 45vh;
+    max-height: 300px;
+    width: 99%;
+    margin: auto;
+  }
+
+  .discover-title h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .discoverSection {
+    padding: 3rem 0rem;
+  }
+
+  .discover-title h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .discoverImgs img {
+    max-height: 400px;
+  }
+}
+
+/* ----- Features Section ----- */
+@media (max-width: 767px) {
+  .features-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .feature-item {
+    margin-bottom: 30px;
+  }
+
+  .feature-text h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .features-container {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-icon-container {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .features-container {
+    padding: 3rem 2rem;
+  }
+}
+
+/* ----- Beach Video Section ----- */
+@media (max-width: 767px) {
+  .beach-video-section {
+    height: 45rem;
+    padding: 2rem 1rem;
+  }
+
+  .beach-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .beach-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .video-modal-content {
+    width: 95%;
+    height: 50vh;
+  }
+
+  .beach-play-btn {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .beach-video-section {
+    height: 45rem;
+    padding: 3rem 2rem;
+  }
+
+  .beach-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .beach-video-section {
+    padding: 4rem 2rem;
+  }
+
+  .beach-title {
+    font-size: 2.5rem;
+  }
+}
+/* ----- Beach Experience Section ----- */
+@media (max-width: 1023px) {
+  .beachExperience {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .beachExperience {
+    padding: 80px 40px;
+  }
+
+  .sec-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ----- Services Section ----- */
+@media (max-width: 767px) {
+  .services-section {
+    padding: 30px 15px;
+  }
+
+  .services-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .service-icon {
+    margin: 0 auto 15px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .book-now {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .services-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-section {
+    padding: 50px 30px;
+  }
+
+  .services-title {
+    font-size: 3rem;
+  }
+}
+
+/* ----- Benefits Section ----- */
+
+@media (max-width: 767px) {
+  .benefits-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .benefits-image {
+    min-width: 100%;
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .benefits-list {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .benefits-container {
+    gap: 30px;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .benefits-image img {
+    max-width: 600px;
+  }
+}
+
+/* ----- Offer Section ----- */
+@media (max-width: 767px) {
+  .offer-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    height: auto;
+    gap: 1.5rem;
+  }
+
+  .offer-text p {
+    padding-left: 0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .offer-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offer-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .offer-banner {
+    padding: 30px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .offer-text p {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .offer-banner {
+    padding: 40px;
+  }
+
+  .offer-text h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ----- Footer ----- */
+@media (max-width: 767px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-section {
+    min-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .newsletter-form {
+    padding-right: 0;
+  }
+
+  .newsletter-input {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .newsletter-btn {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .copyright-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding-top: 20px;
+  }
+
+  .copyright-menu ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer-inner {
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .footer-section {
+    min-width: calc(50% - 15px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 60px 40px 30px;
+  }
+
+  .footer-inner {
+    gap: 40px;
+  }
+
+  .footer-section {
+    min-width: calc(25% - 30px);
+  }
+}
+
+/* ----- Booking Section ----- */
+@media (max-width: 767px) {
+  .bookingSection {
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .bookingOverlay {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .bookingImgs {
+    display: none;
+  }
+
+  .bookingContent h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .bookingContent p {
+    margin-bottom: 1.5rem;
+    width: 70%;
+    font-weight: 400;
+    padding: 1rem 1rem 1rem 2rem;
+  }
+
+  .booking-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bookingContent p {
+    width: 50%;
+  }
+
+  .bookingImgs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    display: grid;
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bookingSection {
+    padding: 2rem;
+  }
+
+  .bookingImgs img {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+/* ----- Destination Section ----- */
+@media (max-width: 767px) {
+  .destinationSection {
+    padding: 2rem 1rem;
+  }
+
+  .destinationSection p.main-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .destination-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .destinationSection {
+    padding: 3rem 2rem;
+  }
+
+  .destinationSection p.main-title {
+    font-size: 3rem;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .destination-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ----- High-resolution displays ----- */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .headerImg img,
+  .discoverImgs img,
+  .benefits-image img,
+  .destination-card img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* ----- Accessibility Improvements ----- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (min-width: 320px) {
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 2px solid #ff681a;
+    outline-offset: 2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mainnav .navbar-collapse {
+    background-color: #111;
+  }
+}
+
+/* ----- Print Styles ----- */
+@media print {
+  .beach-play-btn,
+  .book-now,
+  .navbar-toggler,
+  .whatsapp-btn,
+  .scroll-top-btn,
+  .bookingImgs {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: white !important;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .headerSection,
+  .discoverSection,
+  .features-container,
+  .beachExperience,
+  .services-section,
+  .benefits-container,
+  .offer-banner,
+  .destinationSection {
+    break-inside: avoid;
+  }
+
+  .footer {
+    border-top: 1pt solid #000;
+  }
+}
+
+/* ----- Very large screens (≥1920px) ----- */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+  }
+
+  .headerImg img {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .discoverImgs img {
+    max-height: 450px;
+  }
+
+  .benefits-image img {
+    max-width: 700px;
+  }
+}

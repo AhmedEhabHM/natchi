@@ -1,0 +1,27 @@
+.main-heading{
+    background: url('../img/DSC_9022-scaled.webp') no-repeat top/cover;
+    height: 50vh;
+    color: white;
+}
+.BookingResort{
+    overflow: hidden;
+
+}
+@media (min-width: 640px) {
+.main-heading{
+    height: 75vh;
+}
+}
+@media (min-width: 1024px) {
+
+}
+@media (min-width: 1280px) {
+
+}
+
+@media (min-width: 1536px) {
+}
+
+
+
+

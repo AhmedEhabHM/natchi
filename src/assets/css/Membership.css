@@ -1,0 +1,123 @@
+
+
+.HeroP {
+  width: 100%;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Enhanced button styling to match the screenshot */
+.pageRefresh {
+  background-color: #ff681a;
+  border-radius: 8px;
+  padding: 12px 35px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pageRefresh:hover {
+  background-color: #e55a15;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 104, 26, 0.4);
+}
+
+/* Added custom carousel button styling */
+.custom-carousel-btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.custom-carousel-btn:hover {
+  background-color: rgba(255, 104, 26, 0.9);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  top: 70% !important;
+  transform: translateY(-50%)!important;
+  transform: rotate(-90deg)!important;
+
+}
+
+.carousel-control-prev {
+  left:85% !important;
+  
+}
+
+.carousel-control-next {
+  right: calc(0%-30px) !important;
+    top: 40% !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Added membership header styling */
+.membership-header {
+  color: #ff681a !important;
+  margin-bottom: 10px;
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .HeroP {
+    width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .HeroP {
+    width: 50%;
+  }
+  .carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  top: 70% !important;
+  transform: translateY(-50%)!important;
+}
+
+.carousel-control-prev {
+  left: calc(40% - 30px) !important;
+}
+
+.carousel-control-next {
+  right: calc(40% - 30px) !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+}
+}
+
+@media (min-width: 1024px) {
+  .HeroP {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .HeroP {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .HeroP {
+    width: 35%;
+  }
+}

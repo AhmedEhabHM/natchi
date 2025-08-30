@@ -1,0 +1,252 @@
+  /* Converting exact Tailwind classes to CSS equivalents */
+
+  /* Layout - Tailwind: min-h-screen bg-gray-50 */
+  .container-fluid {
+    min-height: 100vh;
+    background-color: #f9fafb;
+  }
+
+  /* Content wrapper - Tailwind: px-8 py-16 */
+  .content-wrapper {
+    padding: 4rem 2rem;
+  }
+
+  /* Typography - Tailwind: text-orange-500 text-lg font-medium */
+  .membership-header {
+    color: #f97316;
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Title - Tailwind: text-4xl font-bold text-gray-900 mb-6 */
+  .offer-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+
+  /* Description - Tailwind: text-gray-600 mb-8 text-lg */
+  .offer-description {
+    color: #4b5563;
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  /* Benefits list - Tailwind: space-y-4 mb-8 */
+  .benefits-list {
+    margin-bottom: 2rem;
+  }
+
+  /* Benefit item - Tailwind: flex items-start space-x-3 */
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-item span {
+    color: #374151;
+    line-height: 1.5;
+  }
+
+  /* Bullet point - Tailwind: w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0 */
+  .bullet-point {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #f97316;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+  }
+
+
+
+  /* Image section - Tailwind: relative h-screen */
+  .image-section {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  /* Main image - Tailwind: w-full h-full object-cover */
+  .main-beach-image {
+    width: 80%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 20% 0 20% 0;
+  }
+.image-buttons{
+  position:relative;
+  width:100%;
+  top:10%;
+  display:flex;
+  justify-content:space-evenly;
+}
+  /* Exclusive badge - positioned on top-right of beach image */
+  .exclusive-badge2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size:1.5em;
+    text-align: center;
+    background-color: #f97316;
+    color: white;
+    border-radius: 1rem;
+    font-weight: 700;
+   padding:10px 20px;
+
+
+  }
+
+  /* Experience card - positioned on bottom-right of beach image */
+  .experience-card2 {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size:1.5em;
+    background-color: #06b6d4;
+    color: white;
+    border-radius: 1rem;
+    font-weight: 700;
+   padding:10px 20px;
+    line-height: 1.25;
+  }
+
+  /* Circular image - positioned in center-right of beach image */
+  .circular-image {
+    position: absolute;
+    top: 30%;
+    right: 12%;
+    transform: translateY(-50%);
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    z-index: 20;
+  }
+
+
+
+
+  .exclusive-badge {
+    display:none
+  }
+   .experience-card {
+    display:none
+  }
+@media (min-width: 576px) {
+
+ }
+
+
+@media (min-width: 768px) { 
+  
+.image-buttons{
+display:none
+}
+    .exclusive-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    text-align: center;
+ padding:0;
+   
+    top: 3rem;
+    right: 3rem;
+    background-color: #f97316;
+    color: white;
+
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+    border: 12px solid white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+  }
+
+  /* Experience card - positioned on bottom-right of beach image */
+  .experience-card {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 25%;
+    bottom: 3rem;
+    right: 30%;
+    background-color: #06b6d4;
+    color: white;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+     padding:0;
+    line-height: 1.25;
+   outline: white solid 15px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+  }
+
+  /* Circular image - positioned in center-right of beach image */
+  .circular-image {
+    position: absolute;
+    top: 50%;
+    right: 6rem;
+    transform: translateY(-50%);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 40px solid white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    z-index: 20;
+  }
+.content-wrapper .benefits-list{
+
+  display:grid;
+  width: 100%;
+  grid-template-rows: repeat(1, 1fr);
+ align-items: center;
+ justify-content:center;
+
+}
+ 
+
+}
+
+
+@media (min-width: 1024px) { 
+.content-wrapper .benefits-list{
+
+  display:grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+ align-items: center;
+
+}
+}
+
+
+@media (min-width: 1200px) {
+ 
+ }
+
+
+@media (min-width: 1400px) { 
+}
